@@ -6,13 +6,14 @@ This repository contains the recipe for the container used in CodeRefinery Works
 
 ## What's inside
 - The base container is Jupyter datascience-notebook Docker container. 
-- Few Python packages have been added, e.g.: 
+- Python packages have been added, e.g.: 
    - `sphinx`
    - `pytest` 
    - `pycodestyle`
-- Two Jupyter extensions:
+- Jupyter extensions:
    - JupyterLab Git
    - JupyterLab GitHub
+   - ipywidgets
 
 ## Build
 
@@ -68,5 +69,6 @@ At this point, starting the JupyterLab instance, no error message will be displa
 - [GitHub token creation](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 - [JupyterLab Git extension](https://github.com/jupyterlab/jupyterlab-git)
 - [JupyterLab GitHub extension](https://github.com/jupyterlab/jupyterlab-github)
+- [ipywidgets](https://ipywidgets.readthedocs.io/en/latest/)
 
 
