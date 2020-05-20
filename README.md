@@ -3,13 +3,12 @@
 This repository contains the recipe for the container used in CodeRefinery Workshop 2020 by the NykterLab team.
 
 ## What's inside
-- The base container is Jupyter datascience-notebook Docker container.
-- Additions:
- - few Python packages have been added, among the others: 
+- The base container is Jupyter datascience-notebook Docker container. 
+- Few Python packages have been added, e.g.: 
    - `sphinx`
    - `pytest` 
    - `pycodestyle`
- - two Jupyter extensions:
+- Two Jupyter extensions:
    - JupyterLab Git
    - JupyterLab GitHub
 
@@ -51,11 +50,11 @@ To configure Jupyter to use the previously generate token:
 singularity exec containers/coderefinery.sif jupyter notebook --generate-config
 ```
 4. Open the `~/.jupyter/jupyter_notebook_config.py` file with a text editor
-5. Navigate to the bottom of the file and add the following line
+5. Navigate to the bottom of the file and add the following line replacing `< YOUR_ACCESS_TOKEN >` with the token generated above
 ```
 c.GitHubConfig.access_token = '< YOUR_ACCESS_TOKEN >'
 ```
-   Replace `< YOUR_ACCESS_TOKEN >` with the token generated previously.
+
 
 At this point, starting the JupyterLab instance, no error message will be displayed and the user will be able to navigate GitHub repositories from the JupyterLab UI.
 
