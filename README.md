@@ -33,7 +33,7 @@ All JupyterLab options are supported by the command above.
 In order to use the GitHub integration, an authentication token needs to be generated from GitHub and Jupyter lab needs to be configured to use it.
 
 To generate a token:
-1. Navigate to profile settings on GitHub: [https://github.com/settins/profile](https://github.com/settings/profile)
+1. Navigate to profile settings on GitHub: https://github.com/settings/profile
 2. On the menu on the left, click "Developer Settings"
 3. On the menu on the left, click "Personal Access Tokens"
 4. Click on top right button "Generate new token" 
