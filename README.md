@@ -14,21 +14,27 @@ This repository contains the recipe for the container used in CodeRefinery Works
    - JupyterLab Git
    - JupyterLab GitHub
    - ipywidgets
+   
+## Run
+
+### Option 1: SingularityHub
+With this option, a copy of the pre-built container image will be downloaded from SingularityHub
+```
+singularity exec -B /run/user shub://ftabaro/singularity-coderefinery2020 jupyter lab [options]
+```
+
+### Option 2: local image
+This option will run an instance of a locally hosted container. This option requires building, see below.
+```
+singularity exec -B /run/user coderefinery.sif jupyter lab [options]
+```
 
 ## Build
-
 1. Clone this repository
 2. Build
 ```
 sudo singularity build coderefinery.sif Singularity
 ```
-
-## Run
-
-```
-singularity exec -B /run/user coderefinery.sif jupyter lab [options]
-```
-
 All JupyterLab options are supported by the command above.
 
 ## Configure the GitHub integration
