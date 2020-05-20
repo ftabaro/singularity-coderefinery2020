@@ -2,6 +2,17 @@
 
 This repository contains the recipe for the container used in CodeRefinery Workshop 2020 by the NykterLab team.
 
+## What's inside
+- The base container is Jupyter datascience-notebook Docker container.
+- Additions:
+  - few Python packages have been added, among the others: 
+   - `sphinx`
+   - `pytest` 
+   - `pycodestyle`
+  - two Jupyter extensions:
+   - JupyterLab Git
+   - JupyterLab GitHub
+
 ## Build
 
 1. Clone this repository
@@ -15,6 +26,7 @@ sudo singularity build coderefinery.sif Singularity
 ```
 singularity exec -B /run/user coderefinery.sif jupyter lab [options]
 ```
+
 All JupyterLab options are supported by the command above.
 
 ## Configure the GitHub integration
@@ -43,7 +55,7 @@ singularity exec containers/coderefinery.sif jupyter notebook --generate-config
 ```
 c.GitHubConfig.access_token = '< YOUR_ACCESS_TOKEN >'
 ```
-Replace `< YOUR_ACCESS_TOKEN >` with the token generated previously.
+   Replace `< YOUR_ACCESS_TOKEN >` with the token generated previously.
 
 At this point, starting the JupyterLab instance, no error message will be displayed and the user will be able to navigate GitHub repositories from the JupyterLab UI.
 
@@ -53,5 +65,7 @@ At this point, starting the JupyterLab instance, no error message will be displa
 - [Singularity](https://sylabs.io/guides/3.3/user-guide/quick_start.html)
 - [Jupyter datascience-notebook Docker image](https://hub.docker.com/r/jupyter/datascience-notebook)
 - [GitHub token creation](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
+- [JupyterLab Git extension](https://github.com/jupyterlab/jupyterlab-git)
 - [JupyterLab GitHub extension](https://github.com/jupyterlab/jupyterlab-github)
+
 
