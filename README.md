@@ -5,11 +5,11 @@ This repository contains the recipe for the container used in CodeRefinery Works
 ## What's inside
 - The base container is Jupyter datascience-notebook Docker container.
 - Additions:
-  - few Python packages have been added, among the others: 
+ - few Python packages have been added, among the others: 
    - `sphinx`
    - `pytest` 
    - `pycodestyle`
-  - two Jupyter extensions:
+ - two Jupyter extensions:
    - JupyterLab Git
    - JupyterLab GitHub
 
