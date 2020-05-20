@@ -29,6 +29,8 @@ This option will run an instance of a locally hosted container. This option requ
 singularity exec -B /run/user coderefinery.sif jupyter lab [options]
 ```
 
+In both scenarios, all the JupyterLab options are fully supported.
+
 ## Build
 1. Clone this repository
 2. Build
