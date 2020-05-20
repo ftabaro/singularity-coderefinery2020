@@ -42,7 +42,7 @@ To generate a token:
 7. At the bottom of the page, click on "Generate token" 
 8. At this point take note of the code in the green box, copy it and paste it to some secure place
 
-To configure Jupyter to use the previously generate token:
+To configure Jupyter to use the token:
 1. Connect to the machine running the Jupyter container instance (e.g. narvi)
 2. If the file `~/.jupyter/jupyter_notebook_config.py` exists, skip the next step
 3. Generate a config file with:
