@@ -2,6 +2,8 @@
 
 This repository contains the recipe for the container used in CodeRefinery Workshop 2020 by the NykterLab team.
 
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/4356)
+
 ## What's inside
 - The base container is Jupyter datascience-notebook Docker container. 
 - Few Python packages have been added, e.g.: 
