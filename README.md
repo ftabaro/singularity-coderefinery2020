@@ -37,7 +37,6 @@ In both scenarios, all the JupyterLab options are fully supported.
 ```
 sudo singularity build coderefinery.sif Singularity
 ```
-All JupyterLab options are supported by the command above.
 
 ## Configure the GitHub integration
 
