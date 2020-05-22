@@ -1,3 +1,7 @@
+[TOC]
+
+###### tags: `code-refinery` `singularity`
+
 # JupyterLab container for CodeRefinery 2020
 
 This repository contains the recipe for the container used in CodeRefinery Workshop 2020 by the NykterLab team.
