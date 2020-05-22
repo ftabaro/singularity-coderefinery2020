@@ -1,9 +1,13 @@
+
+# JupyterLab container for CodeRefinery 2020
+
 ###### tags: `code-refinery` `singularity`
+
+This repository contains the recipe for the container used in CodeRefinery Workshop 2020 by the NykterLab team.
 
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/4356)
 
 # Table of contents
-- [JupyterLab container for CodeRefinery 2020](#jupyterlab-container-for-coderefinery-2020)
 - [What's inside](#what-s-inside)
 - [Run](#run)
     + [Option 1: SingularityHub](#option-1--singularityhub)
@@ -11,10 +15,6 @@
 - [Build](#build)
 - [Configure the GitHub integration](#configure-the-github-integration)
 - [References](#references)
-
-# JupyterLab container for CodeRefinery 2020
-
-This repository contains the recipe for the container used in CodeRefinery Workshop 2020 by the NykterLab team.
 
 # What's inside
 - The base container is Jupyter datascience-notebook Docker container. 
