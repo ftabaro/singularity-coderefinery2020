@@ -1,14 +1,22 @@
-[TOC]
-
 ###### tags: `code-refinery` `singularity`
+
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/4356)
+
+# Table of contents
+- [JupyterLab container for CodeRefinery 2020](#jupyterlab-container-for-coderefinery-2020)
+- [What's inside](#what-s-inside)
+- [Run](#run)
+    + [Option 1: SingularityHub](#option-1--singularityhub)
+    + [Option 2: local image](#option-2--local-image)
+- [Build](#build)
+- [Configure the GitHub integration](#configure-the-github-integration)
+- [References](#references)
 
 # JupyterLab container for CodeRefinery 2020
 
 This repository contains the recipe for the container used in CodeRefinery Workshop 2020 by the NykterLab team.
 
-[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/4356)
-
-## What's inside
+# What's inside
 - The base container is Jupyter datascience-notebook Docker container. 
 - Python packages have been added, e.g.: 
    - `sphinx`
@@ -19,7 +27,7 @@ This repository contains the recipe for the container used in CodeRefinery Works
    - JupyterLab GitHub
    - ipywidgets
    
-## Run
+# Run
 
 ### Option 1: SingularityHub
 With this option, a copy of the pre-built container image will be downloaded from SingularityHub
@@ -35,14 +43,14 @@ singularity exec -B /run/user coderefinery.sif jupyter lab [options]
 
 In both scenarios, all the JupyterLab options are fully supported.
 
-## Build
+# Build
 1. Clone this repository
 2. Build
 ```
 sudo singularity build coderefinery.sif Singularity
 ```
 
-## Configure the GitHub integration
+# Configure the GitHub integration
 
 In order to use the GitHub integration, an authentication token needs to be generated from GitHub and Jupyter lab needs to be configured to use it.
 
@@ -72,7 +80,7 @@ c.GitHubConfig.access_token = '< YOUR_ACCESS_TOKEN >'
 
 At this point, starting the JupyterLab instance, no error message will be displayed and the user will be able to navigate GitHub repositories from the JupyterLab UI.
 
-## References
+# References
 
 - [Online CodeRefinery workshop](https://coderefinery.github.io/2020-05-25-online/)
 - [Singularity](https://sylabs.io/guides/3.3/user-guide/quick_start.html)
