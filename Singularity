@@ -2,13 +2,23 @@ Bootstrap: docker
 From: jupyter/datascience-notebook:latest
 
 %help
-  Extended jupyter/datascience-notebook with packages for CodeRefinery workshop
+  Extended jupyter/datascience-notebook with packages for CodeRefinery workshop.
+
+  How to start Jupyter Lab IDE:
+    - with default options:                  ./coderefinery.sif
+    - with custom options:                   ./coderefinery.sif --port=9876 --no-browser
+    - with bind mount(s):                    singularity run -B /my/custom/path coderefinery.sif
+    - with bind mount(s) and custom options: singularity run -B /my/custom/path coderefinery.sif --port=9876 --no-browser
 
 %labels
   Author francesco.tabaro@tuni.fi
-  Version 0.1
+  Version 0.1.1
 
 %post
+  BUILDDATE=$(date -I)
+  VERSION="0.1.1"
+  echo "export BUILDDATE=\"${BUILDDATE}\"" >> $SINGULARITY_ENVIRONMENT
+  echo "export VERSION=\"${VERSION}\"" >> $SINGULARITY_ENVIRONMENT
   PATH=/opt/conda/bin:$PATH && \
   apt-get update && apt-get install -y -q vim && \
   conda install --quiet --yes sphinx sphinx_rtd_theme pytest pycodestyle && \
@@ -21,3 +31,7 @@ From: jupyter/datascience-notebook:latest
 %environment
   export PATH=/opt/conda/bin:$PATH
   
+%runscript
+  echo "CodeRefinery 2020 Singularity container v$VERSION-$BUILDDATE"
+  echo "Starting Jupyter Lab..."
+  exec jupyter lab $@

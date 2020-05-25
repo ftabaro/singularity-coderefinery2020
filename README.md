@@ -31,13 +31,25 @@ This repository contains the recipe for the container used in CodeRefinery Works
 
 ### Option 1: SingularityHub
 With this option, a copy of the pre-built container image will be downloaded from SingularityHub
-```
+```bash
+# start with defaults using runscript directive
+singularity run shub://ftabaro/coderefinery.sif [options]
+
+# exec a custom Jupyter command 
 singularity exec -B /run/user shub://ftabaro/singularity-coderefinery2020 jupyter lab [options]
+
 ```
 
 ### Option 2: local image
-This option will run an instance of a locally hosted container. This option requires building, see below.
-```
+These commands will run an instance of a locally hosted container. Any of these options require a locally available container image file, see below.
+```bash
+# start with defaults
+./coderefinery.sif [options]
+
+# start with defaults using runscript directive
+singularity run coderefinery.sif [options]
+
+# start custom command
 singularity exec -B /run/user coderefinery.sif jupyter lab [options]
 ```
 
@@ -46,7 +58,7 @@ In both scenarios, all the JupyterLab options are fully supported.
 # Build
 1. Clone this repository
 2. Build
-```
+```bash
 sudo singularity build coderefinery.sif Singularity
 ```
 
