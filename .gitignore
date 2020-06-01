@@ -1,2 +1,4 @@
 coderefinery.sif
 sandbox/
+Snakefile
+.snakemake
