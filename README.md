@@ -26,6 +26,7 @@ This repository contains the recipe for the container used in CodeRefinery Works
    - JupyterLab Git
    - JupyterLab GitHub
    - ipywidgets
+- Snakemake 
    
 # Run
 
