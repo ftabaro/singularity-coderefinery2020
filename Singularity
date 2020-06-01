@@ -20,9 +20,10 @@ From: jupyter/datascience-notebook:latest
   echo "export BUILDDATE=\"${BUILDDATE}\"" >> $SINGULARITY_ENVIRONMENT
   echo "export VERSION=\"${VERSION}\"" >> $SINGULARITY_ENVIRONMENT
   PATH=/opt/conda/bin:$PATH && \
-  apt-get update && apt-get install -y -q vim && \
+  apt-get update && apt-get install -y -q vim zip curl && \
   conda install --quiet --yes sphinx sphinx_rtd_theme pytest pycodestyle && \
   conda install --quiet --yes -c conda-forge jupyterlab-git nbdime ipywidgets && \
+  conda install --quiet --yes -c conda-forge -c bioconda snakemake-minimal && \
   conda clean --all -f && \
   pip install jupyterlab_github && \
   jupyter lab build && \
