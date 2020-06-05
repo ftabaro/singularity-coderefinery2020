@@ -7,15 +7,6 @@ This repository contains the recipe for the container used in CodeRefinery Works
 
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/4356)
 
-# Table of contents
-- [What's inside](#what-s-inside)
-- [Run](#run)
-    + [Option 1: SingularityHub](#option-1--singularityhub)
-    + [Option 2: local image](#option-2--local-image)
-- [Build](#build)
-- [Configure the GitHub integration](#configure-the-github-integration)
-- [References](#references)
-
 # What's inside
 - The base container is Jupyter datascience-notebook Docker container. 
 - Python packages have been added, e.g.: 
