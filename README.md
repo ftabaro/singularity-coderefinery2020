@@ -93,6 +93,10 @@ c.GitHubConfig.access_token = '< YOUR_ACCESS_TOKEN >'
 
 At this point, starting the JupyterLab instance, no error message will be displayed and the user will be able to navigate GitHub repositories from the JupyterLab UI.
 
+# Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/ftabaro/singularity-coderefinery2020.
+
 # References
 
 - [Online CodeRefinery workshop](https://coderefinery.github.io/2020-05-25-online/)
